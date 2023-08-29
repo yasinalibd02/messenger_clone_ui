@@ -7,7 +7,9 @@ export 'package:flutter/material.dart';
 export 'package:flutter_screenutil/flutter_screenutil.dart';
 export 'package:get/get.dart';
 import 'package:get/get.dart';
+import 'constants/routes/routes.dart';
 import 'constants/theme.dart';
+
 void main() async {
   // Locking Device Orientation
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,16 +34,15 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(414, 896),
       builder: (_, child) => GetMaterialApp(
-
         title: "",
         debugShowCheckedModeBanner: false,
         theme: Themes.light,
         darkTheme: Themes.dark,
         themeMode: Themes().theme,
-        // navigatorKey: Get.key,
-        // initialRoute: Routes.splashScreen,
-        // getPages: Routes.list,
-        // translations: LocalString(),
+        navigatorKey: Get.key,
+        initialRoute: Routes.bottomNavScreen,
+        getPages: Routes.list,
+        //  translations: LocalString(),
         // locale: const Locale('ar', 'AR'),
         builder: (context, widget) {
           ScreenUtil.init(context);
