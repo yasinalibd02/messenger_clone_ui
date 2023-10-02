@@ -25,7 +25,7 @@ class Themes {
   }
 
   static final light = ThemeData.light().copyWith(
-    primaryColor: CustomColor.primaryColor,
+    primaryColor: CustomColor.primaryLightColor,
     backgroundColor: CustomColor.primaryBGLightColor,
     scaffoldBackgroundColor: CustomColor.primaryLightScaffoldBackgroundColor,
     brightness: Brightness.light,
@@ -35,8 +35,8 @@ class Themes {
         ),
   );
   static final dark = ThemeData.dark().copyWith(
-    primaryColor: CustomColor.primaryColor,
-    backgroundColor: CustomColor.primaryColor,
+    primaryColor: CustomColor.primaryDarkColor,
+    backgroundColor: CustomColor.primaryBGDarkColor,
     scaffoldBackgroundColor: CustomColor.primaryDarkScaffoldBackgroundColor,
     brightness: Brightness.dark,
     textTheme: ThemeData.dark().textTheme.apply(
